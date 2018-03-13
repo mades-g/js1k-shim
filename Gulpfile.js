@@ -10,7 +10,7 @@ gulp.task('compress', function() {
   var webgl = false;
   var audio = false
 
-  return gulp.src('src/microvaders.js')
+  return gulp.src('src/app.js')
     .pipe(closureCompiler({
       compilation_level: 'WHITESPACE_ONLY'
     }))
@@ -54,7 +54,7 @@ gulp.task('serve', ['compress'], function() {
             index: "shims/shim.html"
         }
     });
-    gulp.watch("src/microvaders.js", ['js-watch']);
+    gulp.watch("src/app.js", ['js-watch']);
 });
 
 gulp.task('default', ['compress']);
