@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Microvaders</title>
+    <meta name="author" content="Shahrukh Omar">
+  </head>
+  <body>
+    <header>
+      <aside>
+        <%= encodeURI(script).replace(/%../g,'i').length %> bytes
+      </aside>
+    </header>
+    <canvas id="c"></canvas>
+    <script>
+      var c = document.getElementsByTagName('canvas')[0];
+      var b = document.body;
+      var a = c.getContext('2d');
+      document.body.clientWidth; // fix bug in webkit: http://qfox.nl/weblog/218
+    </script>
+    <script>
+      <%= script %>
+    </script>
+  </body>
+</html>
